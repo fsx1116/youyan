@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>停车场管理</title>
+		<link rel="icon" href="favicon.ico" type="image/ico">
+		<meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+		<meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+		<meta name="author" content="yinqi">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<style type="text/css">
+			#parent {
+				width: 155px;
+				height: 29px;
+				overflow: hidden;
+				border: solid 1px #ccc;
+			}
+
+			#parent select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				background: transparent;
+				border: none;
+				padding-left: 10px;
+				width: 155px;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="lyear-layout-web">
+			<div class="lyear-layout-container">
+				<!--左侧导航-->
+				<aside class="lyear-layout-sidebar">
+					<!-- logo -->
+					<div id="logo" class="sidebar-header">
+						<a href="index.html"><img src="images/logo-sidebar.png" title="LightYear" alt="LightYear" /></a>
+					</div>
+					<div class="lyear-layout-sidebar-scroll">
+						<nav class="sidebar-main">
+							<ul class="nav nav-drawer">
+								<li class="nav-item active"><a href="我的小区.html"><i class="mdi mdi-home"></i> 后台首页</a>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i>小区管理</a>
+									<ul class="nav nav-subnav">
+										<li><a href="我的小区.html">我的小区</a></li>
+										<li><a href="业务受理.html">业务受理</a></li>
+										<li><a href="房屋装修.html">房屋装修</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 房产管理</a>
+									<ul class="nav nav-subnav">
+										<li><a href="">楼栋管理</a></li>
+										<li><a href="房屋装修.html">房屋装修</a></li>
+										<li><a href="单元信息.html">单元信息</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 业主管理</a>
+									<ul class="nav nav-subnav">
+										<li><a href="房屋管理.html">房屋管理</a></li>
+										<li><a href="绑定业主.html">绑定业主</a></li>
+										<li><a href="业主信息.html">业主信息</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 物业设备管理</a>
+									<ul class="nav nav-subnav">
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 物业设备维修管理</a>
+									<ul class="nav nav-subnav">
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 智慧停车</a>
+									<ul class="nav nav-subnav">
+										<li><a href="停车场管理.html">停车场管理</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 收费管理</a>
+									<ul class="nav nav-subnav">
+										<li><a href="托收信息.html">托收信息</a></li>
+										<li><a href="房屋费用.html">房屋收费</a></li>
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 投诉管理</a>
+									<ul class="nav nav-subnav">
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 用户报修管理</a>
+									<ul class="nav nav-subnav">
+									</ul>
+								</li>
+								<li class="nav-item nav-item-has-subnav">
+									<a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 重点关怀人员</a>
+									<ul class="nav nav-subnav">
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</aside>
+				<!--End 左侧导航-->
+
+				<!--头部信息-->
+				<header class="lyear-layout-header">
+					<nav class="navbar ">
+						<div class="topbar">
+
+							<div class="topbar-left">
+								<div class="lyear-aside-toggler">
+									<span class="lyear-toggler-bar"></span>
+									<span class="lyear-toggler-bar"></span>
+									<span class="lyear-toggler-bar"></span>
+								</div>
+								<span class="navbar-page-title"> 后台首页 </span>
+							</div>
+							<ul class="topbar-right">
+								<li class="dropdown dropdown-profile">
+									<a href="javascript:void(0)" data-toggle="dropdown">
+										<img class="img-avatar img-avatar-48 m-r-10" src="images/头像.png" alt="加载中..."
+											title="朝向暮而行" />
+										<span>朝向暮而行 <span class="caret"></span></span>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li> <a href="lyear_pages_profile.html"><i class="mdi mdi-account"></i> 个人信息</a>
+										</li>
+										<li> <a href="lyear_pages_edit_pwd.html"><i class="mdi mdi-lock-outline"></i>
+												修改密码</a> </li>
+										<li> <a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
+										<li class="divider"></li>
+										<li> <a href="lyear_pages_login.html"><i class="mdi mdi-logout-variant"></i>
+												退出登录</a> </li>
+									</ul>
+								</li>
+								<!--切换主题配色-->
+								<li class="dropdown dropdown-skin">
+									<span data-toggle="dropdown" class="icon-palette"><i
+											class="mdi mdi-palette"></i></span>
+									<ul class="dropdown-menu dropdown-menu-right" data-stopPropagation="true">
+										<li class="drop-title">
+											<p>主题</p>
+										</li>
+										<li class="drop-skin-li clearfix">
+											<span class="inverse">
+												<input type="radio" name="site_theme" value="default" id="site_theme_1"
+													checked>
+												<label for="site_theme_1"></label>
+											</span>
+											<span>
+												<input type="radio" name="site_theme" value="dark" id="site_theme_2">
+												<label for="site_theme_2"></label>
+											</span>
+											<span>
+												<input type="radio" name="site_theme" value="translucent"
+													id="site_theme_3">
+												<label for="site_theme_3"></label>
+											</span>
+										</li>
+										<li class="drop-title">
+											<p>LOGO</p>
+										</li>
+										<li class="drop-skin-li clearfix">
+											<span class="inverse">
+												<input type="radio" name="logo_bg" value="default" id="logo_bg_1"
+													checked>
+												<label for="logo_bg_1"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_2" id="logo_bg_2">
+												<label for="logo_bg_2"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_3" id="logo_bg_3">
+												<label for="logo_bg_3"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_4" id="logo_bg_4">
+												<label for="logo_bg_4"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_5" id="logo_bg_5">
+												<label for="logo_bg_5"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_6" id="logo_bg_6">
+												<label for="logo_bg_6"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_7" id="logo_bg_7">
+												<label for="logo_bg_7"></label>
+											</span>
+											<span>
+												<input type="radio" name="logo_bg" value="color_8" id="logo_bg_8">
+												<label for="logo_bg_8"></label>
+											</span>
+										</li>
+										<li class="drop-title">
+											<p>头部</p>
+										</li>
+										<li class="drop-skin-li clearfix">
+											<span class="inverse">
+												<input type="radio" name="header_bg" value="default" id="header_bg_1"
+													checked>
+												<label for="header_bg_1"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_2" id="header_bg_2">
+												<label for="header_bg_2"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_3" id="header_bg_3">
+												<label for="header_bg_3"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_4" id="header_bg_4">
+												<label for="header_bg_4"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_5" id="header_bg_5">
+												<label for="header_bg_5"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_6" id="header_bg_6">
+												<label for="header_bg_6"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_7" id="header_bg_7">
+												<label for="header_bg_7"></label>
+											</span>
+											<span>
+												<input type="radio" name="header_bg" value="color_8" id="header_bg_8">
+												<label for="header_bg_8"></label>
+											</span>
+										</li>
+										<li class="drop-title">
+											<p>侧边栏</p>
+										</li>
+										<li class="drop-skin-li clearfix">
+											<span class="inverse">
+												<input type="radio" name="sidebar_bg" value="default" id="sidebar_bg_1"
+													checked>
+												<label for="sidebar_bg_1"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_2" id="sidebar_bg_2">
+												<label for="sidebar_bg_2"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_3" id="sidebar_bg_3">
+												<label for="sidebar_bg_3"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_4" id="sidebar_bg_4">
+												<label for="sidebar_bg_4"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_5" id="sidebar_bg_5">
+												<label for="sidebar_bg_5"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_6" id="sidebar_bg_6">
+												<label for="sidebar_bg_6"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_7" id="sidebar_bg_7">
+												<label for="sidebar_bg_7"></label>
+											</span>
+											<span>
+												<input type="radio" name="sidebar_bg" value="color_8" id="sidebar_bg_8">
+												<label for="sidebar_bg_8"></label>
+											</span>
+										</li>
+										<li class="drop-title">
+											<p>底部</p>
+										</li>
+										<li class="drop-skin-li clearfix">
+											<span class="inverse">
+												<input type="radio" name="footer_bg" value="default" id="footer_bg_1"
+													checked>
+												<label for="footer_bg_1"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_2" id="footer_bg_2">
+												<label for="footer_bg_2"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_3" id="footer_bg_3">
+												<label for="footer_bg_3"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_4" id="footer_bg_4">
+												<label for="footer_bg_4"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_5" id="footer_bg_5">
+												<label for="footer_bg_5"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_6" id="footer_bg_6">
+												<label for="footer_bg_6"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_7" id="footer_bg_7">
+												<label for="footer_bg_7"></label>
+											</span>
+											<span>
+												<input type="radio" name="footer_bg" value="color_8" id="footer_bg_8">
+												<label for="footer_bg_8"></label>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<!--切换主题配色-->
+							</ul>
+						</div>
+					</nav>
+				</header>
+				<!--End 头部信息-->
+
+				<!--页面主要内容-->
+				<main class="lyear-layout-content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="card">
+									<div class="card-header">
+										<h4>房屋费用</h4>
+									</div>
+									<div class="card-body">
+										<span>首页</span>
+										<span>/</span>
+										<span>收费管理</span>
+										<span>/</span>
+										<span>房屋费用
+											<!--  -->
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="card">
+									<div class="card-header">
+										<h4>09-1-802费用</h4>
+										<button id="but" onclick="changeSource1()" class="bth btn-w-md btn-primaryfw"
+											style="border-radius: 6px; width: 50px;
+											 height: 29px; border-style: none; 
+											 background-color: #1db098; color: #FFFFFF;float: right;margin-left: 5px; ">返回
+										</button>
+										<button class="bth btn-w-md btn-primaryfw" style="border-radius: 6px; width: 75px;
+											 height: 29px; border-style: none; 
+											 background-color: #1db098; color: #FFFFFF;float: right;margin-left: 5px;">欠费缴纳  <!-- 跳转到欠费缴纳页面 -->
+										</button>
+										<button class="bth btn-w-md btn-primaryfw" data-toggle="modal"
+											data-target="#myModal4" style="border-radius: 6px; width: 75px;
+											 height: 29px; border-style: none; 
+											 background-color: #1db098; color: #FFFFFF;float: right;margin-left: 5px;">创建费用
+										</button>
+										<button class="bth btn-w-md btn-primaryfw" data-toggle="modal"
+											data-target="#myModal2" style="border-radius: 6px; width: 75px;
+											 height: 29px; border-style: none; 
+											 background-color: #1db098; color: #FFFFFF;float: right;margin-left: 5px;">水电秒表
+										</button>
+										<button class="bth btn-w-md btn-primaryfw" data-toggle="modal"
+											data-target="#myModal" style="border-radius: 6px; width: 75px;
+											 height: 29px; border-style: none; background-color: #1db098; 
+											 color: #FFFFFF; float: right; margin-left: 5px;">代收费用
+										</button>
+
+										<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+											aria-labelledby="myModalLabel" style="display: none;">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<a type="button" class="close" data-dismiss="modal"
+															aria-label="Close"><span aria-hidden="true">×</span></a>
+														<h4 class="modal-title" id="myModalLabel">代收费用</h4>
+													</div>
+													<div class="modal-body">
+
+														<lable style="margin: 0px 0px 0px 43px;">费用类型<select name="qq"
+																id="parent"
+																style="margin-right: 33px; width: 388px; margin: 0px 0px 0px 33px;">
+																<option value="">必填，请选择费用类型</option>
+																<option>水费</option>
+																<option>电费</option>
+																<option>其他</option>
+															</select></lable><br><br><br />
+														<lable style="margin: 0px 0px 0px 43px;">收费项目<select name="qq"
+																id="parent"
+																style="margin-right: 33px; width: 388px; margin: 0px 0px 0px 33px;">
+																<option value="">必填，请选择收费项目</option>
+															</select><br><br><br />
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">收费对象</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		disabled="disabled" placeholder="09-1-802(11)">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">金额</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写金额">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">用量</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写用量">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">开始时间</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写开始时间">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">结束时间</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写结束时间">
+																</div>
+															</div>
+													</div>
+													<div class="modal-footer">
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+										<div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+											aria-labelledby="myModalLabel" style="display: none;">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<a type="button" class="close" data-dismiss="modal"
+															aria-label="Close"><span aria-hidden="true">×</span></a>
+														<h4 class="modal-title" id="myModalLabel">添加抄表</h4>
+													</div>
+													<div class="modal-body">
+														<lable style="margin: 0px 0px 0px 43px;">费用类型<select name="qq"
+																id="parent"
+																style="margin-right: 33px; width: 388px; margin: 0px 0px 0px 33px;">
+																<option value="">必填，请选择费用类型</option>
+																<option>水费</option>
+																<option>电费</option>
+																<option>煤气费</option>
+															</select></lable><br><br />
+														<lable style="margin: 0px 0px 0px 43px;">收费项目<select name="qq"
+																id="parent"
+																style="margin-right: 33px; width: 388px; margin: 10px 0px 0px 33px;">
+																<option value="">必填，请选择收费项目</option>
+															</select><br><br><br>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">收费对象</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		disabled="disabled" placeholder="09-1-802(11)">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">上期度数</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写开始时间" value="0">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">本期度数</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写本期度数" value="">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">上期读表时间</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写上期时间"
+																		value="2021-05-15 08:59:08">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">本期读表时间</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写结束时间" value="">
+																</div>
+															</div>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">备注</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="必填，请填写开始备注" value="">
+																</div>
+															</div>
+													</div>
+													<div class="modal-footer">
+														<span style="float: left;">注：单元选择为0表示为商铺</span>
+														<button type="button" class="btn btn-defaulteeee"
+															data-dismiss="modal">取消</button>
+														<button type="button" class="btn btn-primaryee">保存</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+										<div class="modal fade" id="myModal6" tabindex="-1" role="dialog"
+											aria-labelledby="myModalLabel" style="display: none;">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<a type="button" class="close" data-dismiss="modal"
+															aria-label="Close"><span aria-hidden="true">×</span></a>
+														<h4 class="modal-title" id="myModalLabel">费用更变</h4>
+													</div>
+													<div class="modal-body">
+														<br>
+														<div
+															style="position: relative;left: 0px;bottom:0px;width: 400px;">
+															<span style="margin: 0px 0px 0px 43px;">建账时间</span>
+															<div class="input-group"
+																style="position: relative;left: 100px;bottom:35px;">
+																<input type="text" class="form-control" v-model=""
+																	style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																	placeholder="必填，请填写开始建账时间"
+																	value="2021-04-03 00:00:00">
+															</div>
+														</div>
+														<div
+															style="position: relative;left: 0px;bottom:0px;width: 400px;">
+															<span style="margin: 0px 0px 0px 43px;">计算起始时间</span>
+															<div class="input-group"
+																style="position: relative;left: 100px;bottom:35px;">
+																<input type="text" class="form-control" v-model=""
+																	style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																	placeholder="必填，请填写开始计算起始时间" value="2021-05-03">
+															</div>
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-defaulteeee"
+															data-dismiss="modal">取消</button>
+														<button type="button" class="btn btn-primaryee">保存</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+										<div class="modal fade" id="myModal4" tabindex="-1" role="dialog"
+											aria-labelledby="myModalLabel" style="display: none;">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<a type="button" class="close" data-dismiss="modal"
+															aria-label="Close"><span aria-hidden="true">×</span></a>
+														<h4 class="modal-title" id="myModalLabel">创建费用</h4>
+													</div>
+													<div class="modal-body">
+														<div
+															style="position: relative;left: 0px;bottom:0px;width: 400px;">
+															<span style="margin: 0px 0px 0px 43px;">收费对象</span>
+															<div class="input-group"
+																style="position: relative;left: 100px;bottom:35px;">
+																<input type="text" class="form-control" v-model=""
+																	style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																	placeholder="09-1-802(11)" value="">
+															</div>
+														</div>
+
+														<lable style="margin: 0px 0px 0px 43px;">费用类型<select name="qq"
+																id="parent"
+																style="margin-right: 33px; width: 388px; margin: 0px 0px 0px 33px;">
+																<option value="">必填，请选择费用类型</option>
+																<option>物业费</option>
+																<option>押金</option>
+																<option>煤气费</option>
+																<option>取暖费</option>
+																<option>维修费</option>
+																<option>服务费</option>
+																<option>其他</option>
+																<option>临时车用费</option>
+																<option>系统费用</option>
+																<option>租金</option>
+															</select></lable><br><br>
+														<lable style="margin: 0px 0px 0px 43px;">收费项目<select name="qq"
+																id="parent"
+																style="margin-right: 33px; width: 388px; margin: 0px 0px 0px 33px;">
+																<option value="">必填，请选择收费项目</option>
+															</select><br><br><br>
+															<div
+																style="position: relative;left: 0px;bottom:0px;width: 400px;">
+																<span style="margin: 0px 0px 0px 43px;">计算起始时间</span>
+																<div class="input-group"
+																	style="position: relative;left: 100px;bottom:35px;">
+																	<input type="text" class="form-control" v-model=""
+																		style="width: 390px;height: 30px;margin: 10px 0px 0px 32px;"
+																		placeholder="计算起始时间" value="">
+																</div>
+															</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-defaulteeee"
+															data-dismiss="modal">取消</button>
+														<button type="button" class="btn btn-primaryee">保存</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+
+									</div>
+									<div class="card-body">
+										<table class="table">
+											<thead>
+												<tr>
+													<th>项目费用</th>
+													<th>费用标识</th>
+													<th>费用类型</th>
+													<th>应收金额</th>
+													<th>建账时间</th>
+													<th>计算起始时间</th>
+													<th>计算结束时间</th>
+													<th>说明</th>
+													<th>状态</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>11</td>
+													<td>周期性费用</td>
+													<td>物业费</td>
+													<td>0.0</td>
+													<td>2021-06-16 10:54</td>
+													<td>2021-06-16</td>
+													<td>-</td>
+													<td>面积：100.00<br /> 单价：0.00 <br />附加费：880.00</td>
+													<td>收费中状态</td>
+													<td>
+														<a class="" data-toggle="modal" data-target="#"
+															style="width: 80px; height: 30px;">缴费</a> <!-- 跳转到缴费-收银台页面 -->
+														<a class="" data-toggle="modal" data-target="#"
+															style="width: 80px; height: 30px;">缴费历史</a> <!-- 跳转到缴费历史-物业费用页面 -->
+														<a class="" data-toggle="modal" data-target="#myModal5"
+															style="width: 80px; height: 30px;">取消费用</a>
+														<a class="" data-toggle="modal" data-target="#myModal6"
+															style="width: 80px; height: 30px;">费用变更</a>
+													</td>
+												</tr>
+												<tr>
+													<td>水费代收</td>
+													<td>一次性费用</td>
+													<td>水费</td>
+													<td>0.0</td>
+													<td>2021-06-16 10:54</td>
+													<td>-</td>
+													<td>-</td>
+													<td>用量：<br /> 单价：1.30 <br />附加费：880.00</td>
+													<td>水费结束</td>
+													<td>
+														<a class="" data-toggle="modal" data-target="#"
+															style="width: 80px; height: 30px;">缴费历史</a>
+														<a class="" data-toggle="modal" data-target="#myModal5"
+															style="width: 80px; height: 30px;">取消费用</a>
+													</td>
+												</tr>
+											</tbody>
+										</table><br />
+										注意：计算结束时间 “-” 表示未到计费时间或收费已结束
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</main>
+				<!--End 页面主要内容-->
+
+				<!--底部-->
+				<footer class="lyear-layout-footer">
+					<nav class="navbar ">
+						<div class="bottombar">
+							<div class="container bottom-5">
+								<p class="fl">优研计算机有限公司</p>
+								<p class="fr bottom-right">ABC小区管理系统</p>
+							</div>
+						</div>
+					</nav>
+				</footer>
+			</div>
+		</div>
+
+		<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							请确认您的操作！
+						</h4>
+					</div>
+					<div class="modal-body">
+						确认删除费用
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-defaultee" data-dismiss="modal"
+							style="background-color: #b8b8b8;">点错了
+						</button>
+						<button type="button" class="btn btn-primaryee" style="background-color: #00cc66;">
+							确认删除
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+
+		<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			style="display: none;">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<a type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">×</span></a>
+						<h4 class="modal-title" id="myModalLabel">添加信息</h4>
+					</div>
+					<div class="modal-body">
+						<lable style="margin: 0px 0px 0px 17px;">停车场编号</lable><input type="text"
+							placeholder="必填，请填写停车场编号" size="50" style="float: 33px; margin: 0px 0px 0px 33px;"><br><br>
+						<lable style="margin: 0px 0px 0px 17px;">停车场类型<select name="qq" id="parent"
+								style="margin-right: 33px; width: 365px; margin: 0px 0px 0px 33px;">
+								<option value="">请输入停车场类型</option>
+							</select><br><br>
+							<lable style="margin: 0px 0px 0px 17px;">外部编码</lable><input type="text"
+								placeholder="必填，请填写外部编码 一般为第三方停车场系统ID" size="50"
+								style="float: 33px; margin: 0px 0px 0px 46px;"><br><br>
+							<lable style="margin: 0px 0px 0px 17px;">备注</lable><input type="text" placeholder="必填，请填写备注"
+								size="50" style="float: 33px; margin: 0px 0px 0px 74px; height: 50px;"><br><br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-defaulteeee" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primaryee">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
+		<script type="text/javascript" src="js/main.min.js"></script>
+		<script>
+		</script>
+	</body>
+</html>

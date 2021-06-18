@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>单元信息</title>
+  <link rel="icon" href="favicon.ico" type="image/ico">
+  <meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
+  <meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
+  <meta name="author" content="yinqi">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="lyear-layout-web">
+    <div class="lyear-layout-container">
+      <!--左侧导航-->
+      <aside class="lyear-layout-sidebar">
+        <!-- logo -->
+        <div id="logo" class="sidebar-header">
+          <a href="index.html"><img src="images/logo-sidebar.png" title="LightYear" alt="LightYear" /></a>
+        </div>
+        <div class="lyear-layout-sidebar-scroll">
+          <nav class="sidebar-main">
+            <ul class="nav nav-drawer">
+              <li class="nav-item active"><a href="我的小区.html"><i class="mdi mdi-home"></i> 后台首页</a> </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i>小区管理</a>
+                <ul class="nav nav-subnav">
+                  <li><a href="我的小区.html">我的小区</a></li>
+                  <li><a href="业务受理.html">业务受理</a></li>
+                  <li><a href="房屋装修.html">房屋装修</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 房产管理</a>
+                <ul class="nav nav-subnav">
+                  <li><a href="房屋装修.html">房屋装修</a></li>
+                  <li><a href="单元信息.html">单元信息</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 业主管理</a>
+                <ul class="nav nav-subnav">
+                  <li><a href="房屋管理.html">房屋管理</a></li>
+                  <li><a href="绑定业主.html">绑定业主</a></li>
+                  <li><a href="业主信息.html">业主信息</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 物业设备管理</a>
+                <ul class="nav nav-subnav">
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 物业设备维修管理</a>
+                <ul class="nav nav-subnav">
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 智慧停车</a>
+                <ul class="nav nav-subnav">
+					<li><a href="停车场管理.html">停车场管理</a></li>
+					
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 收费管理</a>
+                <ul class="nav nav-subnav">
+					<li><a href="托收信息.html">托收信息</a></li>
+					<li><a href="房屋费用.html">房屋费用</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 投诉管理</a>
+                <ul class="nav nav-subnav">
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 用户报修管理</a>
+                <ul class="nav nav-subnav">
+                </ul>
+              </li>
+              <li class="nav-item nav-item-has-subnav">
+                <a href="javascript:void(0)"><i class="mdi mdi-menu"></i> 重点关怀人员</a>
+                <ul class="nav nav-subnav">
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <!--End 左侧导航-->
+
+      <!--头部信息-->
+      <header class="lyear-layout-header">
+        <nav class="navbar ">
+          <div class="topbar">
+
+            <div class="topbar-left">
+              <div class="lyear-aside-toggler">
+                <span class="lyear-toggler-bar"></span>
+                <span class="lyear-toggler-bar"></span>
+                <span class="lyear-toggler-bar"></span>
+              </div>
+              <span class="navbar-page-title"> 后台首页 </span>
+            </div>
+            <ul class="topbar-right">
+              <li class="dropdown dropdown-profile">
+                <a href="javascript:void(0)" data-toggle="dropdown">
+                  <img class="img-avatar img-avatar-48 m-r-10" src="images/头像.png" alt="加载中..." title="朝向暮而行" />
+                  <span>朝向暮而行 <span class="caret"></span></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li> <a href="lyear_pages_profile.html"><i class="mdi mdi-account"></i> 个人信息</a> </li>
+                  <li> <a href="lyear_pages_edit_pwd.html"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
+                  <li> <a href="javascript:void(0)"><i class="mdi mdi-delete"></i> 清空缓存</a></li>
+                  <li class="divider"></li>
+                  <li> <a href="lyear_pages_login.html"><i class="mdi mdi-logout-variant"></i> 退出登录</a> </li>
+                </ul>
+              </li>
+              <!--切换主题配色-->
+              <li class="dropdown dropdown-skin">
+                <span data-toggle="dropdown" class="icon-palette"><i class="mdi mdi-palette"></i></span>
+                <ul class="dropdown-menu dropdown-menu-right" data-stopPropagation="true">
+                  <li class="drop-title">
+                    <p>主题</p>
+                  </li>
+                  <li class="drop-skin-li clearfix">
+                    <span class="inverse">
+                      <input type="radio" name="site_theme" value="default" id="site_theme_1" checked>
+                      <label for="site_theme_1"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="site_theme" value="dark" id="site_theme_2">
+                      <label for="site_theme_2"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="site_theme" value="translucent" id="site_theme_3">
+                      <label for="site_theme_3"></label>
+                    </span>
+                  </li>
+                  <li class="drop-title">
+                    <p>LOGO</p>
+                  </li>
+                  <li class="drop-skin-li clearfix">
+                    <span class="inverse">
+                      <input type="radio" name="logo_bg" value="default" id="logo_bg_1" checked>
+                      <label for="logo_bg_1"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_2" id="logo_bg_2">
+                      <label for="logo_bg_2"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_3" id="logo_bg_3">
+                      <label for="logo_bg_3"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_4" id="logo_bg_4">
+                      <label for="logo_bg_4"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_5" id="logo_bg_5">
+                      <label for="logo_bg_5"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_6" id="logo_bg_6">
+                      <label for="logo_bg_6"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_7" id="logo_bg_7">
+                      <label for="logo_bg_7"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="logo_bg" value="color_8" id="logo_bg_8">
+                      <label for="logo_bg_8"></label>
+                    </span>
+                  </li>
+                  <li class="drop-title">
+                    <p>头部</p>
+                  </li>
+                  <li class="drop-skin-li clearfix">
+                    <span class="inverse">
+                      <input type="radio" name="header_bg" value="default" id="header_bg_1" checked>
+                      <label for="header_bg_1"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_2" id="header_bg_2">
+                      <label for="header_bg_2"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_3" id="header_bg_3">
+                      <label for="header_bg_3"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_4" id="header_bg_4">
+                      <label for="header_bg_4"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_5" id="header_bg_5">
+                      <label for="header_bg_5"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_6" id="header_bg_6">
+                      <label for="header_bg_6"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_7" id="header_bg_7">
+                      <label for="header_bg_7"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="header_bg" value="color_8" id="header_bg_8">
+                      <label for="header_bg_8"></label>
+                    </span>
+                  </li>
+                  <li class="drop-title">
+                    <p>侧边栏</p>
+                  </li>
+                  <li class="drop-skin-li clearfix">
+                    <span class="inverse">
+                      <input type="radio" name="sidebar_bg" value="default" id="sidebar_bg_1" checked>
+                      <label for="sidebar_bg_1"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_2" id="sidebar_bg_2">
+                      <label for="sidebar_bg_2"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_3" id="sidebar_bg_3">
+                      <label for="sidebar_bg_3"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_4" id="sidebar_bg_4">
+                      <label for="sidebar_bg_4"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_5" id="sidebar_bg_5">
+                      <label for="sidebar_bg_5"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_6" id="sidebar_bg_6">
+                      <label for="sidebar_bg_6"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_7" id="sidebar_bg_7">
+                      <label for="sidebar_bg_7"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="sidebar_bg" value="color_8" id="sidebar_bg_8">
+                      <label for="sidebar_bg_8"></label>
+                    </span>
+                  </li>
+                  <li class="drop-title">
+                    <p>底部</p>
+                  </li>
+                  <li class="drop-skin-li clearfix">
+                    <span class="inverse">
+                      <input type="radio" name="footer_bg" value="default" id="footer_bg_1" checked>
+                      <label for="footer_bg_1"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_2" id="footer_bg_2">
+                      <label for="footer_bg_2"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_3" id="footer_bg_3">
+                      <label for="footer_bg_3"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_4" id="footer_bg_4">
+                      <label for="footer_bg_4"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_5" id="footer_bg_5">
+                      <label for="footer_bg_5"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_6" id="footer_bg_6">
+                      <label for="footer_bg_6"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_7" id="footer_bg_7">
+                      <label for="footer_bg_7"></label>
+                    </span>
+                    <span>
+                      <input type="radio" name="footer_bg" value="color_8" id="footer_bg_8">
+                      <label for="footer_bg_8"></label>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <!--切换主题配色-->
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--End 头部信息-->
+
+      <!--页面主要内容-->
+      <main class="lyear-layout-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>单元信息</h4>
+                </div>
+                <div class="card-body">
+                  <span>首页</span>
+                  <span>/</span>
+                  <span>房产管理</span>
+                  <span>/</span>
+                  <span>单元信息 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>查询条件</h4>
+                  <a href="" style="float: right;" data-toggle="modal" data-target="#myModal">更多</a>
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    style="display: none;">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                              aria-hidden="true">×</span></button>
+                          <h4 class="modal-title" id="myModalLabel">查询条件</h4>
+                        </div>
+
+                        <div class="modal-body row">
+
+                          <div class="input-group col-lg-6">
+                            <input type="text" class="form-control ">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default mdi mdi-magnify" type="button">选择</button>
+                            </span>
+                          </div>
+                          <div class="input-group col-lg-1.5">
+                            <input type="text" class="form-control" placeholder="请输入单元编号"
+                              style="position: relative;left:300px;bottom: 40px;">
+                          </div>
+                          <div class="input-group col-lg-2">
+                            <input type="text" class="form-control" placeholder="请输入总层数">
+                          </div>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default mdi mdi-magnify" type="button"
+                              style="position: absolute;">查询</button>
+                          </span>
+                          <div class="col-lg-3">
+                            <div class="input-group">
+                              <input type="text" class="form-control"
+                                aria-label="Text input with segmented button dropdown">
+                              <div class="input-group-btn">
+                                <select type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <option value=""></option>
+                                  <option value="">是</option>
+                                  <option value="">否</option>
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </select>
+
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn btn-primary btn-label"><label><i
+                                class="mdi mdi-checkbox-marked-circle-outline"></i></label>保存</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="card-body">
+                  <div class="input-group col-lg-1">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default mdi mdi-magnify" type="button">选择</button>
+                    </span>
+                  </div>
+                  <div class="input-group col-lg-1.5" style="position: relative;left: 400px;bottom:40px;">
+                    <input type="text" class="form-control" placeholder="请输入单元编号">
+                  </div>
+                  <div class="input-group col-lg-2" style="position: relative;left: 800px;bottom:78px;">
+                    <input type="text" class="form-control" placeholder="请输入总层数">
+                  </div>
+                  <span class="input-group-btn" style="position: relative;bottom:110px;right:200px;">
+                    <button class="btn btn-default mdi mdi-magnify" type="button">查询</button>
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>单元信息</h4>
+                </div>
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>绑定业主</th>
+                        <th>业主ID</th>
+                        <th>小区ID</th>
+                        <th>小区名称</th>
+                        <th>关联业主</th>
+                        <th>身份证</th>
+                        <th>手机号</th>
+                        <th>状态</th>
+                        <th>申请时间</th>
+                        <th>手机端类型</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <!--End 页面主要内容-->
+
+      <!--底部-->
+      <footer class="lyear-layout-footer">
+        <nav class="navbar ">
+          <div class="bottombar">
+            <div class="container bottom-5">
+              <p class="fl">优研计算机有限公司</p>
+              <p class="fr bottom-right">ABC小区管理系统</p>
+            </div>
+          </div>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
+  <script type="text/javascript" src="js/main.min.js"></script>
+
+
+</body>
+
+</html>
